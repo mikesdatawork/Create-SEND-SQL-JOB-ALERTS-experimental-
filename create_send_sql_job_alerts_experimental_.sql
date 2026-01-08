@@ -1,24 +1,3 @@
-![MIKES DATA WORK GIT REPO](https://raw.githubusercontent.com/mikesdatawork/images/master/git_mikes_data_work_banner_01.png "Mikes Data Work")        
-
-# Create SEND SQL JOB ALERTS (experimental)
-**Post Date: July 15, 2015**        
-
-
-
-## Contents    
-- [About Process](##About-Process)  
-- [SQL Logic](#SQL-Logic)  
-- [Author](#Author)  
-- [License](#License)       
-
-## About-Process
-
-<p>Here's the sql logic to create the Job SEND SQL JOB ALERTS (beta).  As usual in case the code gets butchered by the blog post; I'll go ahead and include the pdf that shows you all the logic.
-CREATE THE SEND SQL JOB ALERTS (beta) Job</p>      
-
-
-## SQL-Logic
-```SQL
 USE [msdb]
 GO
 /****** Object: Job [SEND SQL JOB ALERTS (beta)] Script Date: 7/15/2015 4:19:20 PM******/ BEGIN TRANSACTION
@@ -49,19 +28,4 @@ EXEC @ReturnCode = msdb.dbo.sp_add_jobstep @job_id=@jobId, @step_name=N'Send ema
 @os_run_priority=0, @subsystem=N'TSQL',
 @command=N'use msdb;
 set nocount on
-
-```
-[![WorksEveryTime](https://forthebadge.com/images/badges/60-percent-of-the-time-works-every-time.svg)](https://shitday.de/)
-
-## Author
-
-[![Gist](https://img.shields.io/badge/Gist-MikesDataWork-<COLOR>.svg)](https://gist.github.com/mikesdatawork)
-[![Twitter](https://img.shields.io/badge/Twitter-MikesDataWork-<COLOR>.svg)](https://twitter.com/mikesdatawork)
-[![Wordpress](https://img.shields.io/badge/Wordpress-MikesDataWork-<COLOR>.svg)](https://mikesdatawork.wordpress.com/)
-
-    
-## License
-[![LicenseCCSA](https://img.shields.io/badge/License-CreativeCommonsSA-<COLOR>.svg)](https://creativecommons.org/share-your-work/licensing-types-examples/)
-
-![Mikes Data Work](https://raw.githubusercontent.com/mikesdatawork/images/master/git_mikes_data_work_banner_02.png "Mikes Data Work")
 
